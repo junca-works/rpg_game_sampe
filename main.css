@@ -1,0 +1,85 @@
+body {
+    background-color: black;
+    color: white;
+}
+/** メインスクリーン */
+div.main-screen {
+    width: 700px;
+    height: 700px;
+    border: 1px solid white;
+}
+/** コマンド */
+div.box-enemy {
+    height:300px;
+    box-sizing: border-box;
+    text-align: center;
+}
+/** コマンド */
+div.box-command {
+    position: absolute;
+    top: 389px;
+    left: 215px;
+    height:120px;
+    width:490px;
+    box-sizing: border-box;
+    line-height:44px;
+}
+/** コマンド-ボタン */
+div.box-command button {
+    border: none;
+    background: inherit;
+    color: inherit;
+    outline: none;
+    width: 90px;
+    font-size: 18px;
+    text-align: left;
+}
+
+/** ステータス */
+div.box-status {
+    position: absolute;
+    top: 400px;
+    left: 15px;
+    height:100px;
+    width: 200px;
+    box-sizing: border-box;
+}
+div.box-status p {
+    margin: 0;
+    padding: 0;
+    width: 150px;
+    font-size: 18px;
+}
+/** メッセージ */
+div.box-msg {
+    border: double 5px white;
+    height: 200px;
+    width: 690px;
+    box-sizing: border-box;
+    position: absolute;
+    top: 505px;
+    left: 15px;
+}
+/**メッセージ内の文字 */
+div.box-msg p {
+    margin: 0;
+    padding: 0;
+}
+
+/** こうげき時に敵をブルブル震わせる */
+div.box-enemy .buruburu {
+    -webkit-animation:buruburu 0.1s 2 linear alternate;
+    animation:buruburu 0.1s 2 linear alternate;
+}
+
+@-webkit-keyframes buruburu {
+    0% {-webkit-transform:translate(0, 0) rotate(-3deg);}
+    50% {-webkit-transform:translate(0, -1px) rotate(0deg);}
+    100% {-webkit-transform:translate(0, 0)rotate(3deg);}
+}
+
+@keyframes buruburu {
+    0% {transform:translate(0, 0) rotate(-3deg);}
+    50% {transform:translate(0, -1px) rotate(0deg);}
+    100% {transform:translate(0, 0)rotate(3deg);}
+}
